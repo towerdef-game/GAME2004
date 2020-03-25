@@ -12,9 +12,11 @@ namespace GRIDCITY
         #region Fields
         private static CityManager _instance;
         public Mesh[] meshArray;
+        
         public Material[] materialArray;
         public Transform buildingPrefab;
         public BuildingProfile[] profileArray;
+        private bool[,,,] cityarry = new bool[11, 11, 11,];
 
         public static CityManager Instance
         {
@@ -61,6 +63,13 @@ namespace GRIDCITY
 		void Update () {
 			
 		}
+        public bool Checkslot(int x, int y, int z)
+        {
+             if(x < 0 || x>10 || y<0 || y>10 || z<0 || z>10)
+            {
+
+            }
+        }
 
 		#endregion
 	#endregion
